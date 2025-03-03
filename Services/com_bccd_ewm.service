@@ -1,0 +1,12 @@
+{
+	"DestinationName": "com.bccd.ewm",
+	"PathSuffix": "/sap/opu/odata/sap/ZLM_MDK_MIGO_GRIB_SRV",
+	"LanguageURLParam": "sap-language",
+	"OfflineEnabled": true,
+	"OfflineOptions": {
+		"StoreParameters": {
+			"StoreName": "grib_store1"
+		}
+	},
+	"SourceType": "Mobile"
+}

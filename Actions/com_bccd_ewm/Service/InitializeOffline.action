@@ -1,0 +1,39 @@
+{
+    "Service": "/deeplinktomdkapp/Services/com_bccd_ewm.service",
+    "DefiningRequests": [{
+            "Name": "DeliveryHdrSet",
+            "Query": "DeliveryHdrSet"
+        },
+        {
+            "Name": "DeliveryItemsSet",
+            "Query": "DeliveryItemsSet"
+        },
+        {
+            "Name": "GRIBDeliveryItemsSet",
+            "Query": "GRIBDeliveryItemsSet"
+        },
+        {
+            "Name": "GRIBDeliverySet",
+            "Query": "GRIBDeliverySet"
+        },
+        {
+            "Name": "GRIBItemsPackedSet",
+            "Query": "GRIBItemsPackedSet"
+        },
+        {
+            "Name": "MaterialMasterSet",
+            "Query": "MaterialMasterSet"
+        },
+        {
+            "Name": "UserInfoSet",
+            "Query": "UserInfoSet"
+        }
+    ],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnFailure": "/deeplinktomdkapp/Actions/com_bccd_ewm/Service/InitializeOfflineFailureMessage.action"
+}

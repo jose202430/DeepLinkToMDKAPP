@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZLM_MDK_MIGO_GRIB_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="MaterialMaster" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MaterialID"/>
+                </Key>
+                <Property Name="MaterialID" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="MaterialID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MaterialText" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="MaterialText" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BaseUoM" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="BaseUoM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BatchFlag" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="BatchFlag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SerialProfile" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="SerialProfile" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MatPackGrp" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="MatPackGrp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MatType" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="MatType" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="UserInfo" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Email"/>
+                </Key>
+                <Property Name="Email" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Email" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlantText" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Plant Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WarehouseText" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Warehouse Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FirstName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="First Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Client" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EWMWarehouse" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Warehouse" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="GRIBItemsPacked" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Delivery"/>
+                    <PropertyRef Name="DlvItem"/>
+                    <PropertyRef Name="HuText"/>
+                </Key>
+                <Property Name="DocumentID" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Document ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itemid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Item ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Delivery" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Delivery" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DlvItem" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Productid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Product ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Productno" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Batchno" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Batch Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pqty" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Packed Qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Uom" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Unit of Measure" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HuText" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="HU Identification" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PackMat" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Packaging Mat" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="GRIBDelivery" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Delivery"/>
+                </Key>
+                <Property Name="DocumentID" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="DocumentId" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Delivery" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Delivery" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="GRIBDeliveryToItemsNav" Relationship="ZLM_MDK_MIGO_GRIB_SRV.GRIBDeliveryToItems" FromRole="FromRole_GRIBDeliveryToItems" ToRole="ToRole_GRIBDeliveryToItems"/>
+            </EntityType>
+            <EntityType Name="DeliveryHdr" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Delivery"/>
+                </Key>
+                <Property Name="DocumentID" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Document ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Delivery" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Delivery" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="DeliveryHdrToItemsNav" Relationship="ZLM_MDK_MIGO_GRIB_SRV.DeliveryHdrToDeliveryItems" FromRole="FromRole_DeliveryHdrToDeliveryItems" ToRole="ToRole_DeliveryHdrToDeliveryItems"/>
+            </EntityType>
+            <EntityType Name="DeliveryItems" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Delivery"/>
+                    <PropertyRef Name="DlvItem"/>
+                </Key>
+                <Property Name="DocumentID" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Document ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itemid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Item ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Delivery" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Delivery" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="DlvItem" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Delivery Item" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Productid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Product ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Productno" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Batchno" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Batch Number" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Dqty" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="0" sap:unicode="false" sap:label="Delivery Qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pqty" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="0" sap:unicode="false" sap:label="Packed Qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Oqty" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="0" sap:unicode="false" sap:label="Open Qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Uom" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Unit of Measure" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StockCategory" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Stock Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RefdocnoPo" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Reference Doc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WhseNumber" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Warehouse No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="GRIBDeliveryItems" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Delivery"/>
+                    <PropertyRef Name="DlvItem"/>
+                </Key>
+                <Property Name="DocumentID" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Document ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itemid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Item ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Delivery" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Delivery" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DlvItem" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Productid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Product ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Productno" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Product" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Batchno" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Batch Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="GRIBItemsToPackedNav" Relationship="ZLM_MDK_MIGO_GRIB_SRV.GRIBItemsToPacked" FromRole="FromRole_GRIBItemsToPacked" ToRole="ToRole_GRIBItemsToPacked"/>
+            </EntityType>
+            <Association Name="DeliveryHdrToDeliveryItems" sap:content-version="1">
+                <End Type="ZLM_MDK_MIGO_GRIB_SRV.DeliveryHdr" Multiplicity="1" Role="FromRole_DeliveryHdrToDeliveryItems"/>
+                <End Type="ZLM_MDK_MIGO_GRIB_SRV.DeliveryItems" Multiplicity="*" Role="ToRole_DeliveryHdrToDeliveryItems"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_DeliveryHdrToDeliveryItems">
+                        <PropertyRef Name="Delivery"/>
+                    </Principal>
+                    <Dependent Role="ToRole_DeliveryHdrToDeliveryItems">
+                        <PropertyRef Name="Delivery"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="GRIBItemsToPacked" sap:content-version="1">
+                <End Type="ZLM_MDK_MIGO_GRIB_SRV.GRIBDeliveryItems" Multiplicity="1" Role="FromRole_GRIBItemsToPacked"/>
+                <End Type="ZLM_MDK_MIGO_GRIB_SRV.GRIBItemsPacked" Multiplicity="*" Role="ToRole_GRIBItemsToPacked"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_GRIBItemsToPacked">
+                        <PropertyRef Name="DlvItem"/>
+                        <PropertyRef Name="Delivery"/>
+                    </Principal>
+                    <Dependent Role="ToRole_GRIBItemsToPacked">
+                        <PropertyRef Name="DlvItem"/>
+                        <PropertyRef Name="Delivery"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="GRIBDeliveryToItems" sap:content-version="1">
+                <End Type="ZLM_MDK_MIGO_GRIB_SRV.GRIBDelivery" Multiplicity="1" Role="FromRole_GRIBDeliveryToItems"/>
+                <End Type="ZLM_MDK_MIGO_GRIB_SRV.GRIBDeliveryItems" Multiplicity="*" Role="ToRole_GRIBDeliveryToItems"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_GRIBDeliveryToItems">
+                        <PropertyRef Name="Delivery"/>
+                    </Principal>
+                    <Dependent Role="ToRole_GRIBDeliveryToItems">
+                        <PropertyRef Name="Delivery"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZLM_MDK_MIGO_GRIB_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="MaterialMasterSet" EntityType="ZLM_MDK_MIGO_GRIB_SRV.MaterialMaster" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="UserInfoSet" EntityType="ZLM_MDK_MIGO_GRIB_SRV.UserInfo" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="GRIBItemsPackedSet" EntityType="ZLM_MDK_MIGO_GRIB_SRV.GRIBItemsPacked" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="GRIBDeliverySet" EntityType="ZLM_MDK_MIGO_GRIB_SRV.GRIBDelivery" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="DeliveryHdrSet" EntityType="ZLM_MDK_MIGO_GRIB_SRV.DeliveryHdr" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="DeliveryItemsSet" EntityType="ZLM_MDK_MIGO_GRIB_SRV.DeliveryItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="GRIBDeliveryItemsSet" EntityType="ZLM_MDK_MIGO_GRIB_SRV.GRIBDeliveryItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="GRIBDeliveryToItemsSet" Association="ZLM_MDK_MIGO_GRIB_SRV.GRIBDeliveryToItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="GRIBDeliverySet" Role="FromRole_GRIBDeliveryToItems"/>
+                    <End EntitySet="GRIBDeliveryItemsSet" Role="ToRole_GRIBDeliveryToItems"/>
+                </AssociationSet>
+                <AssociationSet Name="DeliveryHdrToDeliveryItemsSet" Association="ZLM_MDK_MIGO_GRIB_SRV.DeliveryHdrToDeliveryItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="DeliveryHdrSet" Role="FromRole_DeliveryHdrToDeliveryItems"/>
+                    <End EntitySet="DeliveryItemsSet" Role="ToRole_DeliveryHdrToDeliveryItems"/>
+                </AssociationSet>
+                <AssociationSet Name="GRIBItemsToPackedSet" Association="ZLM_MDK_MIGO_GRIB_SRV.GRIBItemsToPacked" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="GRIBDeliveryItemsSet" Role="FromRole_GRIBItemsToPacked"/>
+                    <End EntitySet="GRIBItemsPackedSet" Role="ToRole_GRIBItemsToPacked"/>
+                </AssociationSet>
+                <FunctionImport Name="LockDelivery" ReturnType="ZLM_MDK_MIGO_GRIB_SRV.DeliveryItems" EntitySet="DeliveryItemsSet" m:HttpMethod="GET" sap:label="Lock Delivery" sap:action-for="ZLM_MDK_MIGO_GRIB_SRV.DeliveryItems">
+                    <Parameter Name="DocumentID" Type="Edm.String" Mode="In" MaxLength="32" sap:label="Document ID"/>
+                </FunctionImport>
+                <FunctionImport Name="UnlockDelivery" ReturnType="ZLM_MDK_MIGO_GRIB_SRV.DeliveryItems" EntitySet="DeliveryItemsSet" m:HttpMethod="GET" sap:label="Unlock Delivery" sap:action-for="ZLM_MDK_MIGO_GRIB_SRV.DeliveryItems">
+                    <Parameter Name="DocumentID" Type="Edm.String" Mode="In" MaxLength="32" sap:label="Document ID"/>
+                </FunctionImport>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <atom:link rel="self" href="https://bccdsaps4.bcc.local:44300/sap/opu/odata/sap/ZLM_MDK_MIGO_GRIB_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://bccdsaps4.bcc.local:44300/sap/opu/odata/sap/ZLM_MDK_MIGO_GRIB_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

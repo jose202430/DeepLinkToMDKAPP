@@ -1,0 +1,8 @@
+{
+    "Message": "Upload in progress...",
+    "CompletionMessage": "Sync completed",
+    "CompletionTimeout": 7,
+    "OnSuccess": "/deeplinktomdkapp/Actions/com_bccd_ewm/Service/UploadOffline.action",
+    "OnFailure": "/deeplinktomdkapp/Actions/com_bccd_ewm/Service/SyncFailureMessage.action",
+    "_Type": "Action.Type.ProgressBanner"
+}

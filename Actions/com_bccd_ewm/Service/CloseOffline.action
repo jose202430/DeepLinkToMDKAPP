@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/deeplinktomdkapp/Services/com_bccd_ewm.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/deeplinktomdkapp/Actions/com_bccd_ewm/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/deeplinktomdkapp/Actions/com_bccd_ewm/Service/CloseOfflineFailureMessage.action"
+}

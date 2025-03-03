@@ -1,0 +1,9 @@
+{
+    "Service": "/deeplinktomdkapp/Services/com_bccd_ewm.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/deeplinktomdkapp/Actions/com_bccd_ewm/Service/DownloadStartedMessage.action",
+    "OnFailure": "/deeplinktomdkapp/Actions/com_bccd_ewm/Service/SyncFailureMessage.action"
+}
