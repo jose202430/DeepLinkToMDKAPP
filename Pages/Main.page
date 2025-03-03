@@ -9,10 +9,6 @@
 			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
 					"Separators": {
 						"TopSectionSeparator": false,
 						"BottomSectionSeparator": true,
@@ -20,8 +16,6 @@
 						"FooterSeparator": true,
 						"ControlSeparator": true
 					},
-					"_Type": "Section.Type.FormCell",
-					"_Name": "SectionFormCell0",
 					"Controls": [
 						{
 							"_Type": "Control.Type.FormCell.Button",
@@ -30,7 +24,7 @@
 							"Separator": true,
 							"Title": "Call GRIB V1",
 							"Alignment": "Center",
-							"ButtonType": "Text",
+							"ButtonType": "Primary",
 							"Semantic": "Tint",
 							"Image": "res://mdk_logo.png",
 							"ImagePosition": "Leading",
@@ -39,7 +33,13 @@
 					],
 					"Layout": {
 						"NumberOfColumns": 1
-					}
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
 				}
 			]
 		}
