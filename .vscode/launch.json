@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MDK Attach on Android",
+      "type": "MDK",
+      "request": "attach",
+      "platform": "android",
+      "sourceMaps": true,
+      "watch": false,
+      "appRoot": "C:/MDK/MDKClient_SDK/BCCD_DEEP_LINKV2"
+    },
+    {
+      "name": "MDK Launch on Android",
+      "type": "MDK",
+      "request": "launch",
+      "platform": "android",
+      "sourceMaps": true,
+      "watch": true,
+      "appRoot": "C:/MDK/MDKClient_SDK/BCCD_DEEP_LINKV2"
+    }
+  ]
+}

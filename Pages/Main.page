@@ -22,7 +22,7 @@
 							"_Name": "btnCallGRIB",
 							"IsVisible": true,
 							"Separator": true,
-							"Title": "Call GRIB V1",
+							"Title": "Call GIWO",
 							"Alignment": "Center",
 							"ButtonType": "Primary",
 							"Semantic": "Tint",
@@ -30,6 +30,20 @@
 							"ImagePosition": "Leading",
 							"Enabled": true, 
 							"OnPress":"/deeplinktomdkapp/Rules/Application/CallGRIB.js"
+						}, 
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "btnCallBinToBin",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Call Bin to Bin",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "res://mdk_logo.png",
+							"ImagePosition": "Leading",
+							"Enabled": true, 
+							"OnPress":"/deeplinktomdkapp/Rules/Application/CallBinToBin.js"
 						}, 
 						{
 							"_Type": "Control.Type.FormCell.Button",

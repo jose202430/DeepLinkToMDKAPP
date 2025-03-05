@@ -7,7 +7,9 @@ export default async function getMobileServiceToken(clientAPI) {
     const requestBody = new URLSearchParams({
         "grant_type": "password",  // or "client_credentials" based on your setup
         "client_id": "sb-com-bccd-im-dev!t281445",
-        "client_secret": "c4b9c509-adb5-48b3-b855-c057e940c1cd$g-TBWvg65-FbaiiaZzksA7KcQ_CxVp56NOqtWO9893g="
+        "client_secret": "c4b9c509-adb5-48b3-b855-c057e940c1cd$g-TBWvg65-FbaiiaZzksA7KcQ_CxVp56NOqtWO9893g=",
+        "username": "jrojas@bccdistribution.com",
+        "password": "Ui5.goals.2024."
     });
 
     try {
