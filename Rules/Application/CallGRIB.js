@@ -20,10 +20,8 @@ export default function CallGRIB(context) {
 
     return context.executeAction('/deeplinktomdkapp/Actions/Confirmation.action').then((result) => {
         if (result.data) {
-            // This will open the SAP Mobile Start app
-            const url = Application.ios 
-                ? "mdkclient-giwo://bccd.im.com"
-                : "mdkclient-giwo://bccd.im.com";
+            // This will open the SAP Mobile APP
+            const url = "mdkclient-giwo://com.bccd.im";
             return openUrl(url);
         } else {
             return Promise.reject('User Deferred');

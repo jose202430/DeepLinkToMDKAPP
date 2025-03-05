@@ -20,10 +20,8 @@ export default function CallBinToBin(context) {
 
     return context.executeAction('/deeplinktomdkapp/Actions/Confirmation.action').then((result) => {
         if (result.data) {
-            // This will open the SAP Mobile Start app
-            const url = Application.ios 
-                ? "mdkclient-bintobin://bccd.wm.com"
-                : "mdkclient-bintobin://bccd.wm.com";
+            // This will open the SAP Mobile APP
+            const url =  "mdkclient-bintobin://com.bccd.wm";
             return openUrl(url);
         } else {
             return Promise.reject('User Deferred');
