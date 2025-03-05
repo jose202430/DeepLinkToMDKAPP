@@ -6,7 +6,7 @@
 				"_Type": "Control.Type.FilterFeedbackBar"
 			},
 			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable0",
+			"_Name": "SectionedTable0", 
 			"Sections": [
 				{
 					"Separators": {
@@ -28,8 +28,23 @@
 							"Semantic": "Tint",
 							"Image": "res://mdk_logo.png",
 							"ImagePosition": "Leading",
-							"Enabled": true
-						}
+							"Enabled": true, 
+							"OnPress":"/deeplinktomdkapp/Rules/Application/CallGRIB.js"
+						}, 
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "btnGetToken",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Get Mobile Service Token",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "res://mdk_logo.png",
+							"ImagePosition": "Leading",
+							"Enabled": true, 
+							"OnPress":"/deeplinktomdkapp/Rules/Application/getMobileServiceToken.js"
+						} 
 					],
 					"Layout": {
 						"NumberOfColumns": 1

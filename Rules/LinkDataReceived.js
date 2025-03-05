@@ -20,13 +20,13 @@ export default function LinkDataReceived(context) {
 
     switch (action) {
         case 'search':
-            if (entity === 'product') {
+            if (entity === 'Delivery') {
                 
             }
             break;
-        case 'product':
+        case 'Delivery':
             if (data.Parameters && data.Parameters.id) {
-                return openProductByID(context, data.Parameters.id);
+                return openDeliveryByID(context, data.Parameters.id);
             }
             break;
         default:
@@ -35,7 +35,7 @@ export default function LinkDataReceived(context) {
     }
 }
 
-function openProductByID(context, id) {
+function openDeliveryByID(context, id) {
     context.getLogger().log(`ID: ${id}`,'Debug');
     return context.read('/deeplinktomdkapp/Services/com_bccd_ewm.service', `Delivery(${id})`, [], null).then(function (result) {
         if (result.length) {
